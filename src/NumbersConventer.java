@@ -59,6 +59,8 @@ public class NumbersConventer extends JPanel implements ActionListener
 		result1.setBounds(450,10,200,50);
 		num1.setFont(new Font("Elephant", Font.PLAIN, 20));
 		result1.setFont(new Font("Elephant", Font.PLAIN, 20));
+		cnvrt.setBounds(260, 50, 180, 50);
+		cnvrt.setFont(new Font("Elephant", Font.PLAIN, 30));
 	}
 	public static void main(String[]args) {
 		new NumbersConventer();

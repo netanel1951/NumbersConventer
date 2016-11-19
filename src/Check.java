@@ -1,12 +1,18 @@
-import java.util.Scanner;
+import java.awt.GraphicsEnvironment;
 
 public class Check
 {
-	public static void main(String[]args) {
-		Scanner reader = new Scanner(System.in);
-		String a = reader.next();
-		a = Conventer.toDec(a, 16);
-		System.out.println(a);
-		System.out.println(Conventer.decTo(a,16));
-	}
+
+  public static void main(String[] args)
+  {
+    String fonts[] = 
+      GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+
+    for ( int i = 0; i < fonts.length; i++ )
+    {
+      System.out.println(fonts[i]);
+    }
+    
+  }
+
 }
