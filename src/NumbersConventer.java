@@ -61,6 +61,8 @@ public class NumbersConventer extends JPanel implements ActionListener
 		result1.setFont(new Font("Elephant", Font.PLAIN, 20));
 		cnvrt.setBounds(260, 50, 180, 50);
 		cnvrt.setFont(new Font("Elephant", Font.PLAIN, 30));
+		chs1.setSelectedIndex(0);
+		chs2.setSelectedIndex(8);
 	}
 	public static void main(String[]args) {
 		new NumbersConventer();
