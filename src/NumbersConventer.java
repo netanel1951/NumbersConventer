@@ -23,11 +23,11 @@ public class NumbersConventer extends JPanel implements ActionListener
 	JComboBox chs2;
 	JLabel num1;
 	JLabel result1;
-	String[] options = {"binary (base 2)", "Ternary (base 3)", "Quaternary (base 4)", "Quinary (base 5)", "Senary (base 6)", "Septenary (base 7)", "Octonary (base 8)", "Nonary (base 9)", "Decimal (base 10)", "Undenary (base 11)", "Duodecimal (base 12)", "Tridecimal (base 13)", "Quattuordecimal (base 14)", "Quindecimal (base 15)", "Hexadecimal (base 16)"};
+	String[] options = {" ","binary (base 2)", "Ternary (base 3)", "Quaternary (base 4)", "Quinary (base 5)", "Senary (base 6)", "Septenary (base 7)", "Octonary (base 8)", "Nonary (base 9)", "Decimal (base 10)", "Undenary (base 11)", "Duodecimal (base 12)", "Tridecimal (base 13)", "Quattuordecimal (base 14)", "Quindecimal (base 15)", "Hexadecimal (base 16)"};
 	public NumbersConventer(){
 		frm = new JFrame ("Conventer");
 		frm.add(this);
-		frm.setSize(700, 420);
+		frm.setSize(700, 250);
 		frm.setVisible(true);
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frm.setResizable(false);
@@ -62,7 +62,11 @@ public class NumbersConventer extends JPanel implements ActionListener
 		cnvrt.setBounds(260, 50, 180, 50);
 		cnvrt.setFont(new Font("Elephant", Font.PLAIN, 30));
 		chs1.setSelectedIndex(0);
-		chs2.setSelectedIndex(8);
+		chs2.setSelectedIndex(0);
+		chs1.setBounds(50, 125, 200, 50);
+		chs1.setFont(new Font("Elephant", Font.PLAIN, 15));
+		chs2.setBounds(450, 125, 200, 50);
+		chs2.setFont(new Font("Elephant", Font.PLAIN, 15));
 	}
 	public static void main(String[]args) {
 		new NumbersConventer();
