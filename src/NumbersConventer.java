@@ -17,6 +17,7 @@ public class NumbersConventer extends JPanel implements ActionListener
 {
 	JFrame frm;
 	JButton cnvrt;
+	JButton clear;
 	JTextField num;
 	JTextField result;
 	JComboBox chs1;
@@ -38,8 +39,9 @@ public class NumbersConventer extends JPanel implements ActionListener
 		result = new JTextField();
 		chs1 = new JComboBox(options);
 		chs2 = new JComboBox(options);
-		num1 = new JLabel("number:");
-		result1 = new JLabel("result:");
+		num1 = new JLabel("Number:");
+		result1 = new JLabel("Result:");
+		clear = new JButton("Clear");
 		add(num1);
 		add(result1);
 		add(cnvrt);
@@ -47,6 +49,7 @@ public class NumbersConventer extends JPanel implements ActionListener
 		add(result);
 		add(chs1);
 		add(chs2);
+		add(clear);
 		num.setBounds(50, 50, 200, 50);
 		num.setFont(new Font("Elephant", Font.PLAIN, 20));
 		result.setBounds(450, 50, 200, 50);
@@ -63,10 +66,17 @@ public class NumbersConventer extends JPanel implements ActionListener
 		cnvrt.setFont(new Font("Elephant", Font.PLAIN, 30));
 		chs1.setSelectedIndex(0);
 		chs2.setSelectedIndex(0);
-		chs1.setBounds(50, 125, 200, 50);
+		chs1.setBounds(50,125,200,50);
 		chs1.setFont(new Font("Elephant", Font.PLAIN, 15));
-		chs2.setBounds(450, 125, 200, 50);
+		chs2.setBounds(450,125,200,50);
 		chs2.setFont(new Font("Elephant", Font.PLAIN, 15));
+		clear.setBounds(260, 125, 180, 50);
+		clear.setFont(new Font("Elephant", Font.PLAIN, 30));
+		chs2.addActionListener(this);
+		chs1.addActionListener(this);
+		cnvrt.addActionListener(this);
+		num.addActionListener(this);
+		clear.addActionListener(this);
 	}
 	public static void main(String[]args) {
 		new NumbersConventer();
